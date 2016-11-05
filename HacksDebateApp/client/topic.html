@@ -11,8 +11,21 @@
   
   {{> currentrank}}
 
-  <button>Start</button>
-  <button>Spectate</button>
+  <button onclick = "startfunc)">Start</button>
+  <script>
+	function startfunc()
+	{
+		alert("finding partner");
+	}
+  </script>
+  <button onclick = "spectatefunc()">Spectate</button>
+  <script>
+	function spectatefunc()
+	{
+		alert("connecting to chat room");
+	}
+  </script>
+  
 </body>
 
 <template name="usrrank">
@@ -45,7 +58,6 @@
 	</tr>
   </table>
   <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
 </template>
 
 <template name="currentrank">
