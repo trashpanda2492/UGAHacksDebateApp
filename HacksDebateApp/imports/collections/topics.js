@@ -16,10 +16,6 @@ Meteor.methods({
     });
   },
 
-  'projects.addGroupToProject'() {
-
-  },
-
   'projects.removeStudentFromProject'() {
 
   },
