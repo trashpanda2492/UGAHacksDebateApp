@@ -1,0 +1,27 @@
+<head>
+  <title>DebateApp</title>
+</head>
+
+<body>
+  <h1>FightMe</h1>
+
+  <h2>Hillary vs. Trump</h2>
+  
+  {{> usrrank}}
+  
+  {{> currentrank}}
+
+  <button>Look</button>
+  <button>Spectate</button>
+</body>
+
+<template name="usrrank">
+  <h3>Account Rankings</h3>
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="currentrank">
+  <h3>Top Ongoing Chats</h3>
+
+</template>
