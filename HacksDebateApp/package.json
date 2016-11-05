@@ -5,7 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
+    "meteor-node-stubs": "~0.2.0",
+    "socket.io": "^1.5.1"
   },
   "devDependencies": {
     "meteor-node-stubs": "^0.2.3",
