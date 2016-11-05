@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import http from 'http';
 import socket_io from 'socket.io';
+import { connect } from './Chat/DebateRooms';
 
 const PORT = 8080;
 
@@ -11,10 +12,7 @@ Meteor.startup(() => {
 
   let counter = 0;
 
-  // New client
-  io.on('connection', function(socket) {
-    console.log('new socket client');
-  });
+  connect(io);
 
   // Start server
   try {
