@@ -1,4 +1,4 @@
-import { Topics } from '../../imports/collections/topics';
+import { Topics } from '../../imports/collections/topics_list';
 
 function generateTopics() {
     const numTopics = Topics.find({}).count();

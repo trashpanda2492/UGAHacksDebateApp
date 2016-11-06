@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import http from 'http';
 import socket_io from 'socket.io';
 import { connect } from './Chat/DebateRooms';
-import { Topics } from '../imports/collections/topics.js'
+import { Topics } from '../imports/collections/topics_list.js'
 import { getDebateRoom } from './topic_management/debate_room.js';
 
 const PORT = 8080;
@@ -31,16 +31,17 @@ Meteor.startup(() => {
     }
 
     Meteor.publish('getRoomForSpectator', function(data) {
-        const title = data.title;
-        const room_id = data.room;
+        let title = data.title;
+        let room_id = data.room;
+        let ret_room;
         if (room_id) {
-            const ret_room = Topics.findOne({"title":title}, {
+            ret_room = Topics.findOne({"title":title}, {
                 "chatrooms": room_id
             });
             return ret_room;
         }
-        const topic = Topics.findOne({"title":title});
-        const chatRooms = topic.chatrooms;
+        let topic = Topics.findOne({"title":title});
+        let chatRooms = topic.chatrooms;
         return chatRooms[Math.floor(Math.random() * chatRooms.length)];
     });
 });

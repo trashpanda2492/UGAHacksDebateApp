@@ -1,4 +1,4 @@
-import { Topics } from '../../imports/collections/topics.js';
+import { Topics } from '../../imports/collections/topics_list.js';
 
 function generateUrl() {
     let text = "";
